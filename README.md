@@ -28,7 +28,7 @@ A Rasa-powered chatbot designed to enhance customer interaction and support with
 | Katman         | Teknoloji                |
 |----------------|--------------------------|
 | NLU/NLG Engine | [Rasa 3.6.21](https://rasa.com) |
-| Dil İşleme     | SpaCy / Regex + Özel Kurallar |
+| Dil İşleme     | Regex + Özel Kurallar |
 | Backend API    | Spring Boot REST         |
 | Veritabanı     | PostgreSQL, Redis        |
 
