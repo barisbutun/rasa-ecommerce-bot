@@ -1,0 +1,24 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"saat\"}}]": "action_saati_soyle",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"saat\"}}, {\"prev_action\": {\"action_name\": \"action_saati_soyle\"}, \"user\": {\"intent\": \"saat\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"begenilen_urun_gosterme\"}}]": "begenilen_urun_gosterme",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"begenilen_urun_gosterme\"}}, {\"prev_action\": {\"action_name\": \"begenilen_urun_gosterme\"}, \"user\": {\"intent\": \"begenilen_urun_gosterme\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"sepet_islemleri_urun_gosterme\"}}]": "sepet_islemleri_urun_gosterme",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"sepet_islemleri_urun_gosterme\"}}, {\"prev_action\": {\"action_name\": \"sepet_islemleri_urun_gosterme\"}, \"user\": {\"intent\": \"sepet_islemleri_urun_gosterme\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"favori_islemleri_urun_gosterme\"}}]": "favori_islemleri_urun_gosterme",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"favori_islemleri_urun_gosterme\"}}, {\"prev_action\": {\"action_name\": \"favori_islemleri_urun_gosterme\"}, \"user\": {\"intent\": \"favori_islemleri_urun_gosterme\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"siparis_islemleri_urun_gosterme\"}}]": "siparis_islemleri_urun_gosterme",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"siparis_islemleri_urun_gosterme\"}}, {\"prev_action\": {\"action_name\": \"siparis_islemleri_urun_gosterme\"}, \"user\": {\"intent\": \"siparis_islemleri_urun_gosterme\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent back",
+      "predicting default action with intent restart",
+      "predicting default action with intent session_start"
+    ]
+  }
+}

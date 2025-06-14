@@ -1,0 +1,93 @@
+version: "3.1"
+
+stories:
+
+  - story: Selamlama_action
+  - steps:
+      - intent: action_custom_selamlama
+      - action: action_custom_selamlama
+  - story: saat
+    steps:
+       - intent: saat
+       - action: action_saati_soyle
+  - story: sepet_islemleri_urun_gosterme
+    steps:
+      - intent: sepet_islemleri_urun_gosterme
+      - action: sepet_islemleri_urun_gosterme
+
+  - story: favori_islemleri_urun_gosterme
+    steps:
+      - intent: favori_islemleri_urun_gosterme
+      - action: favori_islemleri_urun_gosterme
+
+  - story: siparis_islemleri_urun_gosterme
+    steps:
+      - intent: siparis_islemleri_urun_gosterme
+      - action: siparis_islemleri_urun_gosterme
+
+  - story: begenilen_urun_gosterme
+    steps:
+      - intent: begenilen_urun_gosterme
+      - action: begenilen_urun_gosterme
+
+  - story: bozuk_urun
+  - steps:
+      - intent: bozuk_urun
+      - action: utter_bozuk_urun
+
+  - story: Vedalaşma
+    steps:
+      - intent: vedalaşma
+      - action: utter_vedalasma
+
+  - story: Benzer Ürün
+    steps:
+      - intent: benzer_urun
+      - action: actions_benzer_urun
+
+  - story: En Çok Satan Ürünler
+    steps:
+      - intent: en_cok_satan_urunler
+      - action: utter_en_cok_satan_urunler
+
+
+  - story: Kampanya Bilgisi
+    steps:
+      - intent: kampanya_bilgisi
+      - action: utter_kampanya_bilgisi
+
+  - story: İade ve Değişim
+    steps:
+      - intent: iade_degisim
+      - action: utter_iade_degisim
+
+  - story: Teslimat Süresi
+    steps:
+      - intent: teslimat_suresi
+      - action: utter_teslimat_suresi
+
+  - story: Ödeme Seçenekleri
+    steps:
+      - intent: odeme_secenekleri
+      - action: utter_odeme_secenekleri
+
+  - story: Kargo Takip
+    steps:
+      - intent: kargo_takip
+      - action: utter_kargo_takip
+
+  - story: Hesap Bilgileri
+    steps:
+      - intent: hesap_bilgileri
+      - action: utter_hesap_bilgileri
+
+  - story : utter_iade_degisim
+    steps:
+      - intent: iade_degisim
+      - action: utter_iade_degisim
+
+  - story: biz_kimiz
+    steps:
+      - intent: biz_kimiz
+      - action: utter_biz_kimiz
+

@@ -1,0 +1,117 @@
+version: "3.1"
+
+intents:
+  - selamlama
+  - vedalaşma
+  - benzer_urun
+  - en_cok_satan_urunler
+  - kampanya_bilgisi
+  - iade_degisim
+  - teslimat_suresi
+  - odeme_secenekleri
+  - kargo_takip
+  - hesap_bilgileri
+  - sepet_islemleri_urun_gosterme
+  - favori_islemleri_urun_gosterme
+  - siparis_islemleri_urun_gosterme
+  - begenilen_urun_gosterme
+  - saat
+  - biz_kimiz
+
+entities:
+  - urun_turu
+  - city
+
+slots:
+
+  urun1:
+    type: text
+    mappings:
+      - type: custom
+  urun2:
+    type: text
+    mappings:
+      - type: custom
+  siparis_numarasi:
+    type: text
+    mappings:
+      - type: custom
+
+
+responses:
+  utter_iade_degisim:
+    - text: "İade yapılabilmesi için ürünü aldıktan sonra 14 gün geçmeden ürünü iade edebilmeniz için geri ödeme sayfası üzerinden sağlanacaktır. Eğer geri ödeme talebiniz onaylanırsa Aras kargo üzerinden ücretsiz bir şekilde ürününüzü iade edebilirsiniz."
+    - text: "Satın aldığınız ürünü 14 gün içinde iade edebilirsiniz. Onaylanan talepler Aras Kargo ile ücretsiz olarak gönderilir."
+    - text: "İade işlemleri için sipariş tarihinden itibaren 14 günlük süreniz bulunmaktadır. Detaylar için geri ödeme sayfasını kullanabilirsiniz."
+
+  utter_selamlasma:
+    - text: "Merhaba ! Size nasıl yardımcı olabilirim?"
+    - text: "Selam! Yardımcı olabileceğim bir konu var mı?"
+    - text: "Hoş geldiniz! Size nasıl yardımcı olabilirim bugün?"
+
+  utter_vedalasma:
+    - text: "Hoşça kalın, başka bir konuda yardımcı olabilir miyim?"
+    - text: "Görüşmek üzere! Yardıma ihtiyacınız olursa buradayım."
+    - text: "İyi günler dilerim. Başka bir sorunuz olursa tekrar yazabilirsiniz."
+
+  utter_en_cok_satan_urunler:
+    - text: "En çok satan ürünlerimiz arasında şunlar var: Tişörtler, Ayakkabılar, Çantalar."
+    - text: "Şu anda en popüler ürünlerimiz: Tişört, spor ayakkabı ve şık çantalar."
+    - text: "Müşterilerimizin en çok tercih ettiği ürünler: tişörtler, ayakkabılar ve çantalar."
+
+  utter_kampanya_bilgisi:
+    - text: "Kampanyalara yukarıdaki kampanyalar menüsü üzerinden kampanyalı ürünlerimize ulaşabilirsiniz."
+    - text: "Güncel kampanyalarımızı kampanya menüsünden inceleyebilirsiniz."
+    - text: "İndirimdeki ürünleri görmek için kampanyalar bölümünü ziyaret edebilirsiniz."
+
+  utter_iade_degişim:
+    - text: "Ürün iadesi için 14 gün süreniz var. Değişim işlemleri için de aynı süre geçerlidir."
+    - text: "Satın aldığınız ürünü 14 gün içinde iade veya değişim yapabilirsiniz."
+    - text: "İade ve değişim süremiz 14 gündür. Bu süre içerisinde işlemlerinizi başlatabilirsiniz."
+
+  utter_teslimat_suresi:
+    - text: "Siparişinizin teslimat süresi 3 iş günü içinde olacaktır."
+    - text: "Siparişiniz 3 iş günü içerisinde adresinize teslim edilecektir."
+    - text: "Teslimat süresi genellikle 3 iş günü sürmektedir."
+
+  utter_odeme_secenekleri:
+    - text: "Ödeme seçeneklerimiz: Kredi kartı, havale, kapıda ödeme ve taksitli ödeme."
+    - text: "Kredi kartı, havale, kapıda ödeme ve taksitli ödeme yöntemlerini kullanabilirsiniz."
+    - text: "Çeşitli ödeme yöntemlerimiz mevcut: kredi kartı, havale ve kapıda ödeme gibi."
+
+  utter_kargo_takip:
+    - text: "Siparişiniz Fashion Design Kargo firmasıyla gönderilmiştir. Takip numarası SMS ile tarafınıza iletilecektir."
+    - text: "Ürünleriniz Fashion Design Kargo'ya teslim edilmiştir. Kısa süre içinde takip bilgisi elinizde olacaktır."
+    - text: "Siparişiniz Fashion Design Kargo firması tarafından teslim edilecektir. Takip etmek için sipariş detaylarınıza göz atabilirsiniz."
+
+  utter_hesap_bilgileri:
+    - text: "Hesap bilgilerinizi güncelleyebilirsiniz. Adres veya telefon numaranızı değiştirmek isterseniz, bunu yapabilirsiniz."
+    - text: "Profilinizden adres veya iletişim bilgilerinizi kolayca değiştirebilirsiniz."
+    - text: "Hesap bilgilerinizde değişiklik yapmak için hesap ayarlarını kullanabilirsiniz."
+
+  utter_sepet_islemleri:
+    - text: "Sepetinizdeki ürünleri görmek, satın almak veya silmek için işlemler yapabilirsiniz."
+    - text: "Sepetinizdeki ürünleri listeleyebilir, silebilir veya satın alma işlemini başlatabilirsiniz."
+    - text: "Sepetinizi yönetmek için ürünleri görüntüleyebilir veya düzenleyebilirsiniz."
+
+  utter_biz_kimiz:
+    - text: "Alanında uzman iki kişilik bir ekibiz ve Türkiye genelinde hizmet veriyoruz."
+    - text: "İki kişilik dinamik bir ekibiz. Deneyimimizle tüm Türkiye'ye hizmet sunuyoruz."
+    - text: "Küçük ama güçlü bir ekibiz. Tecrübemizle Türkiye genelinde çözümler sunuyoruz."
+
+  utter_bozuk_urun:
+    - text: "Ürünle ilgili bir sorun yaşadıysanız, lütfen geri ödeme talebinde açıklama kısmına durumu detaylıca yazın. Ekibimiz inceleyip size dönüş sağlayacaktır."
+    - text: "Defolu ya da solmuş ürünlerle ilgili olarak, iade ekranındaki açıklama kısmına yaşadığınız problemi belirtmeniz yeterlidir. Ekibimiz değerlendirip sizinle iletişime geçecektir."
+    - text: "Ürünle ilgili yaşadığınız sorunu açıkça ifade ederek iade talebi oluşturabilirsiniz. Ekibimiz sorunun içeriğine göre değerlendirme yapar."
+    - text: "Geri ödeme talebinde bulunurken ürünün durumu hakkında (örneğin: defo, solma) açıklama kısmına detaylı bilgi yazmayı unutmayın."
+
+actions:
+  - action_urun_karsilastir
+  - action_custom_selamlama
+  - action_saati_soyle
+  - sepet_islemleri_urun_gosterme
+  - begenilen_urun_gosterme
+  - actions_benzer_urun
+  - action_custom_fallback
+  - favori_islemleri_urun_gosterme
+  - siparis_islemleri_urun_gosterme

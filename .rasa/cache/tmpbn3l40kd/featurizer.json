@@ -1,0 +1,80 @@
+{
+  "type": "IntentMaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "back": 0,
+        "benzer_ürün": 1,
+        "en_cok_satan_urunler": 2,
+        "hesap_bilgileri": 3,
+        "iade_degişim": 4,
+        "kampanya_bilgisi": 5,
+        "kargo_takip": 6,
+        "nlu_fallback": 7,
+        "odeme_secenekleri": 8,
+        "out_of_scope": 9,
+        "restart": 10,
+        "saat": 11,
+        "selamlama": 12,
+        "sepet_islemleri": 13,
+        "session_start": 14,
+        "siparis_durumu": 15,
+        "stok_durumu": 16,
+        "teslimat_suresi": 17,
+        "urun_karsilastir": 18,
+        "vedalaşma": 19
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_siparis_durumu": 13,
+        "action_teslimat_suresi": 14,
+        "action_iade_degişim": 15,
+        "action_urun_karsilastir": 16,
+        "action_kargo_takip": 17,
+        "action_sepet_islemleri": 18,
+        "action_saati_soyle": 19,
+        "utter_benzer_urun": 20,
+        "utter_en_cok_satan_urunler": 21,
+        "utter_hesap_bilgileri": 22,
+        "utter_iade_degişim": 23,
+        "utter_kampanya_bilgisi": 24,
+        "utter_kargo_takip": 25,
+        "utter_odeme_secenekleri": 26,
+        "utter_selamlasma": 27,
+        "utter_sepet_islemleri": 28,
+        "utter_siparis_durumu": 29,
+        "utter_stok_durumu": 30,
+        "utter_teslimat_suresi": 31,
+        "utter_urun_karsilastir": 32,
+        "utter_vedalasma": 33
+      },
+      "entities": {
+        "city": 0,
+        "siparis_id": 1,
+        "urun_adi": 2
+      },
+      "slots": {
+        "location_0": 0,
+        "siparis_id_0": 1,
+        "urun_adi_0": 2
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": null
+}

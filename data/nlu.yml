@@ -1,0 +1,152 @@
+version: "3.1"
+
+nlu:
+  - intent: action_custom_selamlama
+    examples: |
+      - Merhaba
+      - Selam
+      - Nasılsın?
+      - Günaydın
+      - naber
+      - nasıl gidiyor
+      
+
+  - intent: vedalaşma
+    examples: |
+      - Hoşça kal
+      - Görüşürüz
+      - Bye bye
+
+  - intent: benzer_urun
+    examples: |
+      - bana aldığım kıyafetlere bakarak bir ürün önerisi yap
+      - bana herhangi bir ürün önerisi yapabilir misin?
+      - Bana geçmiş verilerime bakarak bir ürün önerisi yapabilir misin?
+      - bana bir ürün önerisi yap
+
+  - intent: en_cok_satan_urunler
+    examples: |
+      - en çok satan ürünlerin neler
+      - en çok satan ürünlerin hangisi
+
+  - intent: kampanya_bilgisi
+    examples: |
+      - Şu an hangi indirimler var?
+      - Güncel kampanyalar neler?
+      - Bir kupon kodu var mı?
+      - Tişörtlerde indirim var mı?
+      - Ürünlere özel indirim yapıyor musunuz?
+      - İndirim kodu alabilir miyim?
+
+  - intent: iade_degisim
+    examples: |
+      - Aldığım ürünü değiştirebilir miyim?
+      - İade etmek istediğim ürünler var
+      - İade süresi kaç gün?
+      - İade politikanız nedir?
+      - Ürün iadesi nasıl yapılır?
+      - Siparişimi nasıl değiştirebilirim?
+      - İade şartlarınız nelerdir?
+      - Değişim yaparken kargo ücreti öder miyim?
+
+  - intent: teslimat_suresi
+    examples: |
+      - Siparişim kaç günde gelir?
+      - Hızlı teslimat var mı?
+      - Tahmini teslimat süresi ne kadar?
+      - Siparişim kaç gün içinde elimde olur?
+      - Aynı gün teslimat var mı?
+      - Kargo süresi hakkında bilgi verir misin?
+
+  - intent: odeme_secenekleri
+    examples: |
+      - Hangi ödeme yöntemlerini kabul ediyorsunuz?
+      - Taksit var mı?
+      - Kapıda ödeme yapabilir miyim?
+      - Kredi kartına kaç taksit yapılıyor?
+      - Havale ile ödeme kabul ediyor musunuz?
+
+  - intent: kargo_takip
+    examples: |
+      - Siparişim hangi kargo firmasıyla gönderildi?
+      - Siparişim nasıl gelecek?
+      - Kargom hangi firma ile geliyor?
+      - Kargo şirketi hangisi?
+      - Hangi kargo ile teslim edilecek?
+      - Kargo bilgisi verir misiniz?
+      - Siparişim kargoya verildi mi?
+  
+  
+
+  - intent: hesap_bilgileri
+    examples: |
+      - Hesap bilgilerimi nasıl güncelleyebilirim?
+      - Adresimi değiştirebilir miyim?
+      - Telefon numaramı güncelleyebilir miyim?
+      - Şifremi nasıl sıfırlarım?
+      - Yeni adres ekleyebilir miyim?
+
+  - intent: sepet_islemleri_urun_gosterme
+    examples: |
+      - Sepetimde neler var?
+      - Sepetimde ne var?
+      - Sepetimdeki ürünler nelerdir?
+      - Sepetteki ürünlerimi göster?
+
+  - intent: favori_islemleri_urun_gosterme
+    examples: |
+      - Favorilerimde neler var?
+      - Favorimde neler var?
+      - Favorideki ürünler nelerdir?
+      - Favorideki ürünlerimi göster?
+
+  - intent: siparis_islemleri_urun_gosterme
+    examples: |
+      - Siparişlerimde neler var?
+      - Siparişimde ne var?
+      - Siparişimdeki ürünler nelerdir?
+      - Siparişimdeki ürünlerimi göster?
+
+  - intent: begenilen_urun_gosterme
+    examples: |
+      - En çok beğenilen ürünler neler?
+      - En çok beğenilen ürünleri gösterebilir misin?
+      - Diğer kullanıcılar hangi ürünleri beğenmiş?
+      - Beğenilen ürünleri göster?
+
+  - intent: biz_kimiz
+    examples: |
+     - Firmanızın vizyonu nedir?
+     - Şirketiniz ne iş yapıyor?
+     - Bu projeyi kimler yürütüyor?
+ 
+  - intent: bozuk_urun
+    examples: |
+      - Gelen üründe defo çıktı nasıl iade edebilirim
+      - Gönderdiğiniz ürün sipariş ettiğim ürün değil
+      - ürün görseldekiyle aynı değil
+      - ürün arızalı geldi
+      - ürün kırık geldi
+      - elime ulaşan ürün kusurlu
+      - ürün yırtık çıktı
+
+
+  - intent: saat
+    examples: |
+      - Saat kaç?
+      - [amsterdam](city)'da saat kaç?
+      - [istanbul](city)'da saat kaç?
+      - [london](city)'da saat kaç?
+
+lookup_tables:
+  - name: city
+    elements: |
+      - amsterdam
+      - istanbul
+      - london
+      - washington
+      - paris
+regex:
+  - name: siparis_no
+    pattern: \d{1,8}
+

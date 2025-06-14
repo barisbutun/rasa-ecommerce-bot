@@ -1,0 +1,69 @@
+recipe: default.v1
+
+# The assistant project unique identifier
+# This default value must be replaced with a unique assistant name within your deployment
+assistant_id: 20240202-190057-resonnt-action
+
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: tr
+
+pipeline:
+
+  # Tokenizer
+  - name: WhitespaceTokenizer
+
+  - name: RegexEntityExtractor
+    use_lookup_tables: false
+    use_regexes: true
+    use_word_boundaries: true
+
+  # Word and Character N-gram Features
+  - name: CountVectorsFeaturizer
+    analyzer: word
+    min_ngram: 1
+    max_ngram: 2
+  - name: CountVectorsFeaturizer
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: 4
+
+
+  # Intent Classification
+  - name: DIETClassifier #transform tabanlı niyet sınıflandırıcı
+    epochs: 200
+    constrain_similarities: true
+
+  # Entity Recognition
+  - name: EntitySynonymMapper
+
+  # Response Selection
+  - name: ResponseSelector #kullanıcı mesajlarına uygun yanıtlar belirler
+    epochs: 100
+    constrain_similarities: true
+
+  # Fallback
+  - name: FallbackClassifier #anlam belirsizliği veya düşük güvenilirlik durumlarında geri dönüş yapacak bir modeldir
+    threshold: 0.6           # 0.3'ten 0.6’ya çıkarıyoruz
+    ambiguity_threshold: 0.2
+
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+policies:
+
+  # Memoization Policy
+  - name: MemoizationPolicy
+
+  # Rule Policy
+  - name: RulePolicy
+
+  # UnexpecTED Intent Policy
+  - name: UnexpecTEDIntentPolicy
+    max_history: 5
+    epochs: 100
+
+  # TED Policy
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 100
+    constrain_similarities: true

@@ -1,0 +1,89 @@
+version: "3.1"
+
+rules:
+  - rule: saati_soyle
+    steps:
+      - intent: saat
+      - action: action_saati_soyle
+
+  - rule: sepet_islemleri
+    steps:
+      - intent: sepet_islemleri_urun_gosterme
+      - action: sepet_islemleri_urun_gosterme
+
+  - rule: favori_islemleri_urun_gosterme
+    steps:
+      - intent: favori_islemleri_urun_gosterme
+      - action: favori_islemleri_urun_gosterme
+
+  - rule: siparis_islemleri_urun_gosterme
+    steps:
+      - intent: siparis_islemleri_urun_gosterme
+      - action: siparis_islemleri_urun_gosterme
+
+  - rule: begenilen_urun_gosterme
+    steps:
+      - intent: begenilen_urun_gosterme
+      - action: begenilen_urun_gosterme
+
+  - rule: benzer_urun_gosterme
+    steps:
+      - intent: benzer_urun
+      - action: actions_benzer_urun
+
+  - rule: Handle fallback
+    steps:
+      - intent: nlu_fallback
+      - action: action_custom_fallback
+
+  - rule : selamlama
+    steps:
+      - intent: action_custom_selamlama
+      - action: action_custom_selamlama
+  - rule: urun_bozuk
+    steps:
+      - intent: bozuk_urun
+      - action: utter_bozuk_urun
+intents:
+  - action_custom_selamlama
+  - vedalaşma
+  - benzer_urun
+  - en_cok_satan_urunler
+  - stok_durumu
+  - kampanya_bilgisi
+  - iade_degisim
+  - teslimat_suresi
+  - odeme_secenekleri
+  - kargo_takip
+  - hesap_bilgileri
+  - sepet_islemleri_urun_gosterme
+  - favori_islemleri_urun_gosterme
+  - siparis_islemleri_urun_gosterme
+  - begenilen_urun_gosterme
+  - saat
+  - biz_kimiz
+  - bozuk_urun
+  - siparis_detayi
+
+entities:
+  - urun_turu
+  - city
+
+actions:
+  - action_custom_selamlama
+  - action_urun_karsilastir
+  - action_saati_soyle
+  - sepet_islemleri_urun_gosterme
+  - begenilen_urun_gosterme
+  - actions_benzer_urun
+  - action_custom_fallback
+  - siparis_islemleri_urun_gosterme
+
+
+slots:
+  urun1:
+    type: text
+  urun2:
+    type: text
+  siparis_numarasi:
+    type: text
